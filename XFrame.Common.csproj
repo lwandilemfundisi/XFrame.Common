@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<PackageId>XFrame.Common</PackageId>
+		<Version>7.0.0</Version>
+		<Authors>Lwandile Mfundisi</Authors>
+		<Description>XFrame.Common houses common utils needed for use in other libraries or projects</Description>
+		<IsPackable>true</IsPackable>
+
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="JetBrains.Annotations" Version="2022.3.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+	</ItemGroup>
+
+	<Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+		<ItemGroup>
+			<BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+		</ItemGroup>
+	</Target>
+
+</Project>
