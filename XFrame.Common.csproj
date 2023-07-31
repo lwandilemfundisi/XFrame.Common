@@ -7,9 +7,7 @@
 		<Authors>Lwandile Mfundisi</Authors>
 		<Description>XFrame.Common houses common utils needed for use in other libraries or projects</Description>
 		<IsPackable>true</IsPackable>
-
 		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
