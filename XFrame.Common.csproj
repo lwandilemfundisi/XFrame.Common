@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>net7.0;net8.0;net9.0</TargetFrameworks>
 		<PackageId>XFrame.Common</PackageId>
-		<Version>7.0.6</Version>
+		<Version>9.0.0</Version>
 		<Authors>Lwandile Mfundisi</Authors>
 		<Description>XFrame.Common houses common utils needed for use in other libraries or projects</Description>
 		<IsPackable>true</IsPackable>
